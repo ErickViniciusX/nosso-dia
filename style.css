@@ -1,0 +1,149 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffc7d9 0%, #ff83aa 100%); /* Fundo em tons de rosa */
+    color: #444;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+}
+
+h1, h2 {
+    color: #d10045;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* --- ESTILO DO LOGIN --- */
+#password-input {
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid #ff83aa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+button {
+    background-color: #d10045;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a30037;
+}
+
+.error-message {
+    margin-top: 10px;
+    color: #e00000;
+    font-weight: bold;
+}
+
+/* --- ESTILO DO JOGO DA MEMÓRIA --- */
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas para 8 cartas */
+    gap: 10px;
+    perspective: 1000px; /* Para o efeito flip 3D */
+    margin: 20px auto;
+}
+
+.card {
+    width: 100%;
+    height: 100px; /* Ajuste a altura conforme necessário */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta o lado traseiro durante o flip */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-back {
+    background-color: #ff83aa; /* Cor da parte de trás da carta */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card.match .card-inner {
+    opacity: 0.5; /* Cartas combinadas ficam um pouco transparentes */
+    pointer-events: none; /* Não podem ser clicadas novamente */
+}
+
+/* --- ESTILO DA CARTA --- */
+.love-letter {
+    margin-top: 30px;
+    text-align: left;
+    background-color: #fff0f5; /* Fundo de papel para a carta */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ffc7d9;
+}
+
+.letter-content {
+    white-space: pre-wrap; /* Preserva quebras de linha no texto */
+    font-style: italic;
+    color: #6a0028;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
