@@ -1,5 +1,5 @@
 // VARIÁVEIS PRINCIPAIS
-const CORRECT_PASSWORD = "amor"; // *** MUDE AQUI PARA A SUA SENHA SECRETA! ***
+const CORRECT_PASSWORD = "primeiromes"; // *** MUDE AQUI PARA A SUA SENHA SECRETA! ***
 const memoryGame = document.getElementById('memory-game');
 const gameStatus = document.getElementById('game-status');
 const loveLetter = document.getElementById('love-letter');
@@ -125,5 +125,6 @@ function unlockLetter() {
     // Rola a tela para a carta
     loveLetter.scrollIntoView({ behavior: 'smooth' }); 
 }
+
 
 // O jogo só será inicializado após o login bem-sucedido.
