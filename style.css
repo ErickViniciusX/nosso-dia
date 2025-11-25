@@ -1,7 +1,8 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ffc7d9 0%, #ff83aa 100%); /* Fundo em tons de rosa */
-    color: #444;
+    /* NOVO AZUL: Gradiente de azul claro para médio */
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); 
+    color: #333; /* Cor do texto geral mais escura */
     text-align: center;
     margin: 0;
     padding: 20px;
@@ -21,7 +22,8 @@ body {
 }
 
 h1, h2 {
-    color: #d10045;
+    /* NOVO AZUL: Azul Escuro Principal */
+    color: #1a237e; 
 }
 
 p {
@@ -34,13 +36,15 @@ p {
     margin: 20px auto;
     width: 80%;
     max-width: 300px;
-    border: 2px solid #ff83aa;
+    /* NOVO AZUL: Borda */
+    border: 2px solid #64b5f6; 
     border-radius: 8px;
     text-align: center;
 }
 
 button {
-    background-color: #d10045;
+    /* NOVO AZUL: Fundo do Botão */
+    background-color: #1a237e; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -51,7 +55,8 @@ button {
 }
 
 button:hover {
-    background-color: #a30037;
+    /* NOVO AZUL: Hover do Botão */
+    background-color: #0d124b; 
 }
 
 .error-message {
@@ -63,15 +68,15 @@ button:hover {
 /* --- ESTILO DO JOGO DA MEMÓRIA --- */
 .memory-game {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas para 8 cartas */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 10px;
-    perspective: 1000px; /* Para o efeito flip 3D */
+    perspective: 1000px; 
     margin: 20px auto;
 }
 
 .card {
     width: 100%;
-    height: 100px; /* Ajuste a altura conforme necessário */
+    height: 100px; 
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s;
@@ -97,7 +102,7 @@ button:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* ESSENCIAL: Oculta o lado oposto ao que está virado para você */
+    backface-visibility: hidden; 
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -106,16 +111,14 @@ button:hover {
     font-weight: bold;
 }
 
-/* CORREÇÃO APLICADA: Inverte as rotações iniciais */
 .card-front {
-    /* LADO DA IMAGEM: Começa virado para trás (invisível) */
     transform: rotateY(180deg); 
 }
 
 .card-back {
-    background-color: #ff83aa; /* Cor da parte de trás da carta */
+    /* NOVO AZUL: Cor da parte de trás da carta */
+    background-color: #64b5f6; 
     color: white;
-    /* LADO DO '?' : Começa virado para frente (visível) */
     transform: rotateY(0deg); 
 }
 
@@ -135,16 +138,19 @@ button:hover {
 .love-letter {
     margin-top: 30px;
     text-align: left;
-    background-color: #fff0f5; 
+    /* NOVO AZUL: Fundo da Carta (papel) */
+    background-color: #f5faff; 
     padding: 30px;
     border-radius: 10px;
-    border: 1px solid #ffc7d9;
+    /* NOVO AZUL: Borda da Carta */
+    border: 1px solid #bbdefb;
 }
 
 .letter-content {
     white-space: pre-wrap;
     font-style: italic;
-    color: #6a0028;
+    /* NOVO AZUL: Cor do texto da carta */
+    color: #0d124b; 
 }
 
 .signature {
